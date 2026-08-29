@@ -1,0 +1,34 @@
+name: LIMEN TED v0.2 Wave 1 execution
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build deterministic runner
+        run: docker build -t limen-ted-v02-wave1 .
+
+      - name: Execute seven preregistered oracle pairs
+        run: |
+          docker run --name limen-ted-v02-wave1 limen-ted-v02-wave1
+          docker cp limen-ted-v02-wave1:/work/LIMEN_TED_v0.2_WAVE1_EXECUTION_RECEIPT.zip ./LIMEN_TED_v0.2_WAVE1_EXECUTION_RECEIPT.zip
+
+      - name: Expose receipt checksum
+        run: sha256sum LIMEN_TED_v0.2_WAVE1_EXECUTION_RECEIPT.zip
+
+      - name: Upload execution receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: LIMEN_TED_v0.2_WAVE1_EXECUTION_RECEIPT
+          path: LIMEN_TED_v0.2_WAVE1_EXECUTION_RECEIPT.zip
+          if-no-files-found: error
