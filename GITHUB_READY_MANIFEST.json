@@ -1,0 +1,18 @@
+{
+  "artifact_id": "LIMEN-TED-GITHUB-READY-v0.1",
+  "status": "READY_FOR_GITHUB_UPLOAD",
+  "pre_execution_state": {
+    "ready": 6,
+    "frozen": 0
+  },
+  "workflow": ".github/workflows/run-limen-ted.yml",
+  "workflow_name": "LIMEN TED full-stack execution",
+  "expected_artifact": "LIMEN_TED_EXECUTION_RECEIPT",
+  "critical_files": [
+    ".github/workflows/run-limen-ted.yml",
+    "Dockerfile",
+    "tools/run_and_collect.sh",
+    "LIMEN_TED_SEXTPAIR_EXEC_v0.1.zip",
+    "LIMEN_TED_FREEZE_RECEIPT_PROTOCOL_v0.1.zip"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "artifact_id": "LIMEN-TED-PORTABLE-RUNNER-v0.1",
+  "status": "PORTABLE_EXECUTION_RUNNER_NOT_YET_EXECUTED",
+  "inputs": {
+    "LIMEN_TED_SEXTPAIR_EXEC_v0.1.zip": "609cfad120371694e4dcd3c958f5b8c1730d0e6a7fddcc14795b97a3da81e97e",
+    "LIMEN_TED_FREEZE_RECEIPT_PROTOCOL_v0.1.zip": "498c1dd0580e6ae114b91f0f5b1673abe34e9a4fc94b88d33b63c8969a40c63d"
+  },
+  "execution_paths": [
+    "Docker local",
+    "GitHub Actions manual workflow"
+  ],
+  "expected_output": "LIMEN_TED_EXECUTION_RECEIPT.zip",
+  "benchmark_state_before_execution": {
+    "tier_a_ready": 6,
+    "tier_a_frozen": 0
+  },
+  "scientific_rule": "Runner infrastructure cannot change expected labels, target rules, or freeze criteria."
+}

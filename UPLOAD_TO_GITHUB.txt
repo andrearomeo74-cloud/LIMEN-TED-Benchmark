@@ -1,0 +1,8 @@
+UPLOAD THIS DIRECTORY CONTENT TO THE ROOT OF A NEW GITHUB REPOSITORY.
+
+Then:
+GitHub -> Actions -> "LIMEN TED full-stack execution" -> Run workflow
+
+When complete:
+download artifact "LIMEN_TED_EXECUTION_RECEIPT"
+and return LIMEN_TED_EXECUTION_RECEIPT.zip.
