@@ -1,7 +1,7 @@
 FROM maven:3.9.9-eclipse-temurin-21
 
 RUN apt-get update \
- && apt-get install -y --no-install-recommends python3 python3-pip unzip ca-certificates \
+ && apt-get install -y --no-install-recommends python3 python3-pip unzip zip ca-certificates \
  && rm -rf /var/lib/apt/lists/* \
  && pip3 install --break-system-packages lxml
 
